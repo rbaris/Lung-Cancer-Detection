@@ -7,7 +7,7 @@ Akciğer kanseri oldukça yaygın bir kanserdir. Tüm kanserlerin %12-16’sın�
 Bu sebeple kanser hastalığının teşhisi ile alakalı herhangi bir gelişme insanların
 sağlıklı bir yaşam sürmesi açısından oldukça önemlidir. Günümüzde makine öğrenmesi yöntemlerinin kullanılması, kanser hastalığının
 erken teşhisi ve tahmini için yapılan çalışmalara büyük katkılar sağlamaktadır. Bu çalışmada da k-En Yakın Komşu, Naive Bayes, Karar ağaçları gibi üç farklı makine öğrenmesi yöntemleri Kaggle platformunda yer
-alan akciğer kanseri seti kullanılmıştır[Akciğer Kanseri Tespiti](https://www.kaggle.com/code/alaaadell/lung-cancer-detection/data). Elde edilen sonuçlar doğruluk değerleri ve karmaşıklık matrisi
+alan akciğer kanseri seti kullanılmıştır .[ Akciğer Kanseri Tespiti](https://www.kaggle.com/code/alaaadell/lung-cancer-detection/data). Elde edilen sonuçlar doğruluk değerleri ve karmaşıklık matrisi
 değerleri ile verilerek karşılaştırılmıştır. Eğitilen modellerin üzerinden kullanıcı girdi oluşturarak modellerden cevap alabilir. Akciğer kanseri veri seti için en yüksek isabet oranı %87.0967 ile Naive Bayes yöntemi olmuştur. Fakat projede çapraz doğrulama uygulandığı için doğruluk oranları farklılık gösterebilir.
  
 Anahtar kelimeler: Makine öğrenmesi, akciğer kanseri, sınıflandırma, erken teşhis.
