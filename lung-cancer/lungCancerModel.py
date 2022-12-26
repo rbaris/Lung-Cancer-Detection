@@ -49,7 +49,7 @@ modelDT = tree.DecisionTreeClassifier()
 modelDT.fit(x_train,y_train) 
 
 testsayisi = len(x_test)
-print("Test veri sayısı: %d" %testsayisi)
+print("Test veri sayısı:",testsayisi)
 
 #tahmin yap
 tahminKNN = modelKNN.predict(x_test)
@@ -107,7 +107,7 @@ input_data_numpy_array = np.asarray(input_data)
 input_data_reshape = input_data_numpy_array.reshape(1, -1)
 
 predictionKNN = modelKNN.predict(input_data_reshape)
-print("KNN modelinin tahmini : %d" %predictionKNN)
+print("KNN modelinin tahmini :",predictionKNN)
 
 if (predictionKNN[0]== 0):
     print("Akciğer kanseri değilsin sağlığına dikkat etmeye devam!")
@@ -115,7 +115,7 @@ else:
         print("Akciğer kanseri olabilirsin en kısa sürede hastaneye git!")
         
 predictionNB = modelNB.predict(input_data_reshape)
-print("Naive Bayes modelinin tahmini : %d" %predictionNB)
+print("Naive Bayes modelinin tahmini :", predictionNB)
 
 if (predictionNB[0]== 0):
     print("Akciğer kanseri değilsin sağlığına dikkat etmeye devam!")
@@ -123,11 +123,9 @@ else:
         print("Akciğer kanseri olabilirsin en kısa sürede hastaneye git!")        
 
 predictionDT = modelDT.predict(input_data_reshape)
-print("Karar ağacı modelinin tahmini : %d" %predictionDT)
+print("Karar ağacı modelinin tahmini :",predictionDT)
 
 if (predictionDT[0]== 0):
     print("Akciğer kanseri değilsin sağlığına dikkat etmeye devam!")
 else:
         print("Akciğer kanseri olabilirsin en kısa sürede hastaneye git!")
-
-print("*"*50)
