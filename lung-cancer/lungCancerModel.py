@@ -56,38 +56,17 @@ tahminKNN = modelKNN.predict(x_test)
 tahminNB = modelNB.predict(x_test)
 tahminDT = modelDT.predict(x_test)
 
-#kaç doğru kaç yanlış tahmin var
-dogruKNN = (tahminKNN == y_test).sum()
-yanlisKNN = (tahminKNN != y_test).sum()
-dogruNB = (tahminNB == y_test).sum()
-yanlisNB = (tahminNB != y_test).sum()
-dogruDT = (tahminDT == y_test).sum()
-yanlisDT = (tahminDT != y_test).sum()
-
-print("KNN sınıflandırması için doğru tahmin sayısı:%d" %dogruKNN)
-print("KNN sınıflandırması için yanlış tahmin sayısı:%d" %yanlisKNN)
-print("Naive Bayes sınıflandırması için doğru tahmin sayısı:%d" %dogruNB)
-print("Naive Bayes sınıflandırması için yanlış tahmin sayısı:%d" %yanlisNB)
-print("Karar ağacı sınıflandırması için doğru tahmin sayısı:%d" %dogruDT)
-print("Karar ağacı sınıflandırması için yanlış tahmin sayısı:%d" %yanlisDT)
 print("KNN algoritması")
-accKNN = (100*dogruKNN)/testsayisi
-print("Doğruluk : %f" %accKNN)
 print(classification_report(y_test,tahminKNN))
-print("*"*50)
+
 print("Naive Bayes algoritması")
-accNB = (100*dogruNB)/testsayisi
-print("Doğruluk : %f" %accNB)
 print(classification_report(y_test,tahminNB))
-print("*"*50)
+
 print("Karar Ağacı algoritması")
-accDT = (100*dogruDT)/testsayisi
-print("Doğruluk : %f" %accDT)
 print(classification_report(y_test,tahminDT))
 # a=tree.plot_tree(modelDT,impurity=(False),filled=(True),fontsize=(8),feature_names=features,class_names=(True))
 # plt.show(a)
 print(tree.export_text(modelDT,feature_names=features))
-print("*"*50)
 
 cmKNN = confusion_matrix(tahminKNN, y_test)
 cmNB = confusion_matrix(tahminNB, y_test)
